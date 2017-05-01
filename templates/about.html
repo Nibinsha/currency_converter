@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+ {% include 'navbar.html' %}
+
+
+{% block jumbotron %}
+
+<style>
+{% block style %}
+.jumbotron {
+     background-color:#43C360;
+     color: #FFF;
+}
+{% endblock %}
+</style>
+      <div class="jumbotron">
+        <div class = 'row'>
+            <div class = 'col-sm-6'>
+        <h2 style="color:rgb(255,100,0)"> ABOUT US </h2>
+        <h1>Currency Converter</h1>
+       <p>
+           Currency converters usually display a value that is not biased towards buying or selling. This is useful when:
+
+    <p>  &#9830;  Estimating the value of goods or services</p>
+    <p>  &#9830;  Basic accounting and invoicing</p>
+    <p>  &#9830;  Preparing financial plans and reports</p>
+
+        <p>
+          <a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}" role="button">join us &raquo;</a>
+        </p>
+       </div>
+      <div class='col-sm-6' style='background-color:black;height:315px'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/o8gHqW4_gDw" frameborder="0" allowfullscreen></iframe>
+          <p style="color:rgb(255,0,0)"> To Know More About Currency Conversion Watch This Video  </p>
+     </div>
+</div>
+      </div>
+{% endblock %}
+{% block content %}
+
+
+            <li><a class="btn btn-lg btn-primary" href="/currency/" role="button">Click to Check Currennt Status</a></li>
+          
+
+{% endblock %}
+

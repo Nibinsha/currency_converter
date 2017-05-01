@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %} <!-- New line -->
+
+
+
+
+
+{% block jumbotron %}
+
+<style>
+{% block style %}
+.jumbotron {
+     background-color:#43C360;
+     color: #FFF;
+}
+p {
+   color : black;
+   background-color:red;
+}
+s {
+  color : black;
+  
+}
+{% endblock %}
+</style>
+      <div class="jumbotron">
+        <div class = 'row'>
+            <div class = 'col-sm-6'>
+
+ <h3>Currency Converter</h3>
+<p> <b> The Conversion Result is </b></p>
+<h2><s> <b> {{ value }} </b><s></h2>
+
+  </div>
+</div>
+      </div>
+
+{% endblock %}
+
+<h3>Currency Converter</h3>
+<p> <b> The Conversion Result is </b></p>
+<h2><s> <b> {{ value }} </b><s></h2>
+     
+<h1>{{title}}</h1>
+
+
+{% block content %}
+
+
+            
+           <li><a class="btn btn-lg btn-primary" href="/currency/" role="button">Click to Check Currennt Status</a></li>
+
+{% endblock %}
+
+

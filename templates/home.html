@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %} <!-- New line -->
+
+
+
+
+
+{% block jumbotron %}
+
+<style>
+{% block style %}
+.jumbotron {
+     background-color:#43C360;
+     color: #FFF;
+}
+{% endblock %}
+</style>
+      <div class="jumbotron">
+        <div class = 'row'>
+            <div class = 'col-sm-6'>
+        <h1>Currency Converter</h1>
+                <p>A currency converter is software code that is designed to convert one currency into another in order to check its corresponding value. The code is generally a part of a web site[1] or it forms a mobile app and it is based on current market or bank exchange rates.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}" role="button">join us &raquo;</a>
+        </p>
+       </div>
+      <div class='col-sm-6' style='background-color:black;height:315px'>
+          <img src="{% static "images/ddw-currency-converter.png" %}" alt="Mountain View" style="width:510px;height:300px;">
+          
+     </div>
+</div>
+      </div>
+{% endblock %}
+
+
+     
+<h1>{{title}}</h1>
+
+
+{% block content %}
+
+
+            <li><a class="btn btn-lg btn-primary" href="/currency/" role="button">Click to Check Currennt Status</a></li>
+          
+
+{% endblock %}
+
+

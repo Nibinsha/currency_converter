@@ -1,0 +1,41 @@
+<style>
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: blue;
+    background-color : black;
+}
+</style>
+<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="/about/">About</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">WELCOME</a></li>
+
+           
+
+          </ul> 
+          <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/">HOME</a></li>
+          {% if request.user.is_authenticated %} 
+            <a class="btn btn-lg btn-primary" href="{% url 'auth_logout' %}" role="button">LOGOUT &raquo;</a>
+            Hiii {{ user }}
+            {% else %}
+         
+            <a class="btn btn-lg btn-primary" href="{% url 'auth_login' %}" role="button">LOGIN &raquo;</a>
+            <a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}" role="button">REGISTER &raquo;</a>
+           
+            {% endif %}
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
